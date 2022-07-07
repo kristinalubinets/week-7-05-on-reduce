@@ -35,16 +35,15 @@ Array.prototype.myReduce = function (callback, initialValue) {
   var previousValue = 0;
   var currentValue = 0;
 
-  if(!initialValue) {
+  if(!initialValue) 
     currentValue = 1;
-  }
-  if(initialValue) {
+  
+  if(initialValue) 
     previousValue = initialValue;
-    currentValue = 0;
-  }
-  previousValue = callback(this[previousValue], this[currentValue++]);
+  
+  previousValue = this[previousValue];
 
-  for (let i = 2; i < this.length; i++) {
+  for (let i = 1; i < this.length; i++) {
 
     sum = callback(previousValue, this[currentValue++]);
     previousValue = sum;
