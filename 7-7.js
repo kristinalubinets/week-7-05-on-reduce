@@ -96,4 +96,18 @@ countOccur([1,2,2,3]);   //Expected: {1:1,2:2,3:1}
 
 
 
-/******************************************************************************************************/
+/****************************************  Richest Customer Wealth  **************************************/
+
+/**
+ * @param {number[][]} accounts
+ * @return {number}
+*/
+var maximumWealth = function(accounts) {
+  return  accounts.reduce( (wealthMax, client) => { 
+    let currClientWealth =  client.reduce( (sum, balance) => sum + balance, 0);
+      return Math.max(wealthMax, currClientWealth)}, 0)
+};
+
+
+
+/****************************************  Richest Customer Wealth  **************************************/
