@@ -110,4 +110,14 @@ var maximumWealth = function(accounts) {
 
 
 
-/****************************************  Richest Customer Wealth  **************************************/
+/****************************************  Convert Objects to Arrays  **************************************/
+
+function toArray(obj) {
+  return Object.entries(obj);
+}
+
+console.log(toArray({ shrimp: 15, tots: 12 }));
+
+
+
+/****************************************    **************************************/
