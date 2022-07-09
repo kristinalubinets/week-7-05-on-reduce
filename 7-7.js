@@ -118,6 +118,25 @@ function toArray(obj) {
 
 console.log(toArray({ shrimp: 15, tots: 12 }));
 
+/******* or ******/
+
+function myEntries(obj) {
+  let arr = [];
+
+  for(let i in obj) {
+    let inner = [];
+
+    if(i) {
+      inner.push(i);
+      inner.push(obj[i]);
+    }
+    arr.push(inner);
+  }
+  return arr;
+}
+
+console.log(myEntries({ a: 1, b: 2 })) //Expected: [["a", 1], ["b", 2]]
+
 
 
 /****************************************    **************************************/
