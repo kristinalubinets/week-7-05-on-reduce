@@ -31,7 +31,7 @@ var arrayStringsAreEqual = function(word1, word2) {
 const reduceAr = [3, 5, 2, 7];
 
 Array.prototype.myReduce = function (callback, initialValue) {
-  var sum = 0;
+
   var previousValue = 0;
   var currentValue = 0;
 
@@ -45,9 +45,7 @@ Array.prototype.myReduce = function (callback, initialValue) {
 
   for (let i = 1; i < this.length; i++) {
 
-    sum = callback(previousValue, this[currentValue++]);
-    previousValue = sum;
-
+    previousValue = callback(previousValue, this[currentValue++]);
     console.log('sum=' + sum);
   } 
   return sum;
